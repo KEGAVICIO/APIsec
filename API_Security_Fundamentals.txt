@@ -1,0 +1,167 @@
+OWAS = Open Worldwide Application Security Project
+
+API Security Top 10
+API1 - BROKEN OBJECT LEVEL AUTHORIZATION
+API2 - BROKEN AUTHENTICATION
+API3 - BROKEN OBJECT PROPERTY LEVEL AUTHORIZATION
+API4 - UNRESTRICTED RESOURCE CONSUMPTION
+API5 - BROKEN FUNCTION LEVEL AUTHORIZATION
+API6 - UNRESTRICTED ACCESS TO SENSITIVE BUSINESS FLOWS
+API7 - SERVER SIDE REQUEST FORGERY
+API8 - SECURITY MISCONFIGURATION
+API9 - IMPROPER INVENTORY MANAGEMENT
+API10 - UNSAFE CONSUMPTION OF APIs
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+API1 - BROKEN OBJECT LEVEL AUTHORIZATION (BOLA)
+
+What is?
+  - Broken authorization refers to flaws in logic/rules governing access
+  - Most common and damaging API vulnerability
+  - Very dificult to detect in runtime
+  - Critical to test for BOLA in pre-production
+
+Prevention
+  - Discuss authorization rules during API design phase
+  - Review business requeriments and define data access policies
+  - Enforece authorization controls at application logic layer
+  - Implement automated, pre-production testing to find BOLA flaws
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+API2 - BROKEN AUTHENTICATION 
+
+Whay is?
+  - Api vulnerability due to weak or poor authentication 
+  - Often a result of missing security controls or poor implemented controls 
+  - Example: not using OAuth, no 2FA, no captcha, credential stuffing
+
+Example, Risk Exposure
+  - Data theft
+  - Unauthorized transactions
+  - High volumen API abuse
+  - Ransom, PII harvesting
+
+Prevention 
+  - Define authentication polices based on business requirements
+  - COnsider data sensitive in polices
+  - IMplement continuous testing to identify gaps, weaknesses
+  - Dont assume APIs are hidden/wont be found. Loock the door!
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+API3 - BROKEN OBJECT PROPERTY LEVEL AUTHORIZATION
+
+What is it?
+  - Explout of endpoints by reading and/or modifying values of objects
+  - Ability to update object elements ("mass assignment")
+  - Revealing unnecessary sensitive data ("excessive data exposure")
+
+Example, Risk Exposure
+  - User is able to ser "account-type=premium"
+  - API returns excessive, unnecessary details
+  - Exposing sensitive user data 
+  - Data theft
+
+Prevention
+  - Ensure user can only access legitimate, permitted fields
+  - Return only minimum amount of data required for the use case
+  - Define data requirements in API specifications
+  - Test to validate policy compliance
+  - Implement proper controls enforced to prevent mass assignment exploit
+  - Test control to identify logic flaws
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+API4 - UNRESTRICTED RESOURCE CONSUMPTION
+
+What is it?
+  - Formerly "Lack of resource and rate limiting"
+  - Abuse of APIs due to high volumes of API calls, large request, etc.
+
+Example, Risk exposure
+  - Missing/inadequate rate controls
+  - Mass data harvesting
+  - Execution timeouts
+  - Max memory, number of files, upload size
+  - Excessive operations in single request
+  - Excessive records returned in a request
+  - Denial of service
+  - Performance impact
+
+Prevention
+  - Implement traffic controls
+  - Test effectiveness of controls
+  - Note: rate limiting is a velocity control, not a volume control
+    - Attackers are clever and determined
+    - Will evade detection by limiting request velocity
+    - Breanches can take months
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+API5 - BROKEN FUNCTION LEVEL AUTHORIZATION
+
+What is it?
+  - About of API functionality to improperly modify objects (create, update, delete)
+  - Often involves replacing passive methods (GET) with active (PUT, DELETE)
+
+Example, Risk Exposure
+  - May be used to escalate privilege
+  - Modify parameters, e.g., "user-type = premium"
+  - Can be exploited to modify account details
+  - Delete an invoice
+  - Set account balance = $0
+
+Prevention
+  - Identify and prioritize functions that expose high sensitivity capability
+  - Develop controls to limit access
+  - Implement continuous release testing to ensure proper behavior
+  - Review RBAC permissions across all user types and detect drift
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+API6 - UNRESTRICTED ACCESS TO SENSITIVE BUSINESS FLOWS
+
+What is it?
+  - Abuse of a legitimate business workflow
+  - Excessive, automated use 
+  - Typically result of application logic flaw 
+
+Example, Risk Exposure
+  - Loss of critical business activity
+  - Mass, automated ticket purchasing
+  - High volume referral bonuses
+  - Brute forcing incremental IDs
+
+Prevention 
+  - Consider not just how your application is meant to work 
+  - Avoid use of incementals IDs 
+  - Train API owners, developers to consider non "happy path" usage
+  - Think like a hacker - how can your app be abused/misused
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+API7 - SERVER SIDE REQUEST FORGERY
+
+What is it?
+  - Tracking your API server to go somewhere it shouldnt
+  - Exploit URL inputs to make a request to a malicious, 3rd party server
+
+Example
+  - Creates channel for malicious request, data access or other fraudulent activity
+  - Potential for data leaks
+  - User inputs malicious destinations:
+    - Malware site
+    - /localhost/etc/passwd
+
+Prevention
+  - Utilize least privilege model
+  - DOnt trust any inputs without input validation and sanitization
+  - Validate ALL user-supplied information, including URL parameters
+  - Simulate SSRF attacks during QA/testing to identify any vulnerabilities
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
