@@ -1,0 +1,138 @@
+The 3 pillars:
+  - Governance: Developing secure APIs
+  - Monitoring: Detecting threats in production
+  - Testing: Ensuring APIs are free of flaws
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+GOVERNANCE 
+
+The goal to this pillar is to establish consistency in how your APIs get developed, how they get deployed, how they get tested, and everything else.
+
+  Awareness       |   Policy & Process|
+  ====================================|
+  Know your APIs  | API Dev process   |
+  Know your data  | API documentation |
+  Know your risks | Style guides      |
+  ====================================|
+
+  Benefits
+    Consistency 
+    Settings expectations
+    Establishing standard processes
+    Enforcing security
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Awareness: know your APIs
+  - Get full inventory APIs
+  - Know your infrastructure
+  - Standardize API deployment process
+  - Mandate API documentation
+
+Documentation: OpenAPI Specification (Swagger)
+  - Industry standard for REST APIs
+  - Machine-readable (YAML, JSON)
+  - Aids development, 3rd party integration
+  - Also aids security Testing
+  - Manually or auto-generated
+  - Control what's public vs private
+  - Retire old documentation
+  
+Defines API capability (contract)
+  - Title, description, version
+  - Base-URL
+  - Endpoints, paths
+  - Request, response payloads
+  - Authentication requirements
+  - Parameters, data types
+  - Methods
+
+Style Guides: Promote Governance, Consistency 
+  - Authentication: type (basic, token, certificate), implementation
+  - Authorization: who has access to what where enforced
+  - Naming Conventions: URIs as nouns, Methods as verbs, pluralization, hierarchu, case, language, no jargon/abbreviations
+  - Error codes: status codes, reference ID, human readable messages
+  - Versioning: when to increment, when not types of versions
+  - Units, Formats, Standars: date/time formats, timezones
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+MONITORING 
+  Runtime Protection
+    - Policy enforcement
+    - Authentication
+    - Traffic filtering
+
+  Threat Detection
+    - Fraudulent traffic 
+    - Volumetric attacks
+    - Incident response
+
+  Control Validation
+    - Verify API controls
+    - Uncover anomalies
+
+  Proactive: Blocking
+    - API gateway
+    - Web App Firewall
+
+  Reactive: Alerting
+    - Logging, SIEM
+    - Runtime API Threat Management
+
+  API DISCOVER
+    - Monitoring can aid API inventory efforts
+      - Identify API endpoints in use
+      - Discover undocumented/unknown APIs
+
+    - Comprehensive discovery requires more sources:
+      - API gateway, web application Firewall
+      - Code reposiroty
+      - Application testing, crawling
+
+    - Reliance on traffic based-discovery misses:
+      - Internal API traffic not seen by traffic analysis tool
+      - Pre-production APIs 
+      - Unexercised endpoints
+
+  The Monitoring challenge:
+    API attacks pass through defenses because they look legitimate.
+    BAD! GET/api/user?id='OR 1=1--
+    OK?  USER ID 10: DELETE/api/transfer?id=123
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+TESTING 
+
+  The testing challenge:
+    Security 
+      - Unsecured endpoints 
+      - Incrementals IDs 
+      - Injection, XSS
+      - Fuzzing, input Validation
+      - Error handling
+
+    Data 
+      - Excessive data exposure
+      - Sensitive data exposure 
+      - Personal, health, bank data 
+      - File, directory exposure
+      - Data exfiltration
+
+    Logic
+      - Object ID manipulation
+      - Cross-account access
+      - API function abuse
+      - Role-based accecss control 
+      - Authorization gaps
+
+  API testing approaches:
+    Option 1:
+      - Do nothing
+    Option 2:
+      - Do it yourself
+    Option 3:
+      - Pay someone else to do it
+    Option 4:
+      - Automate it

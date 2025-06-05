@@ -1,0 +1,81 @@
+CYBERSECURITY LANDSCAPE
+
+  Network
+    - Firewall
+    - NAC
+    - Threat Protection
+    - Deception
+
+  Enpoint
+    - EDR
+    - Anti Malware/Virus
+    - Vulnerability Management
+
+  Application
+    - SAST (static application security testing), DAST (dynamic application security testing)
+    - SCA, Container Security
+    - Web app Firewall
+    - API security 
+
+  Data
+    - Encryption
+    - DLP
+    - Access Control
+
+  Web/Messaging
+    - Email Gateway
+    - Web Gateway
+
+  Identify
+    - Authentication
+    - PIM
+    - Identify governance
+
+  Detection
+    - SIEM
+    - SOAR
+    - Incident Response
+
+  Cloud
+    - CASB
+    - Infrastructure Security
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+The API security lifecycle
+
+  API Definition: 
+    - Secure design 
+    - Governance 
+    - Policies
+  
+  Development: 
+    - Code reviews 
+    - Static code analysis 
+    - Comprosition analysis
+    
+  Testing: 
+    - Legacy DAST 
+    - Pen-testing 
+    - Bug bounty
+
+  Deployment
+    - Web server
+    - API Gateway
+    - WAF / SIEM
+
+  Retirement
+    - Governance
+    - Versioning
+    - Deprecation
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+WHERE CAN YOU BEST MITIGATE RISK?
+
+Risk                    | API Definition | API Development | Testing | Deployment | Retirement |
+========================|================|=================|=========|============|============|
+Unknown APIs            |      OK        |                 |         |    OK      |            |
+Improper account access |                |      OK         |    OK   |            |            |
+Data harvesting         |                |                 |    OK   |            |            |
+===============================================================================================|
