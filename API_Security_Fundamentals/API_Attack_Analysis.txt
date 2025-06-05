@@ -1,36 +1,103 @@
 API BREACHES
 
-| Target          | Impact
-====================================================
-| USPS            | 60M records
-| Coinbase        | Fraudulent transactions
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
+| Target          | Impact                  |
+============================================|
+| USPS            | 60M records             |
+| Coinbase        | Fraudulent transactions |
+| Experian        | 10s of millons          |
+| Instagram       | Account takeover        |
+| Optus           | 10M records             |
+| T-Mobile        | 30M records             |
+| Dell            | 49M records             |
+| Parler          | 70TB data harvested     |
+| Waze            | Data exposure           |
+| Bumble          | 95M records             |
+| Zoom            | Unauthorized access     |
+| Facebook        | 530M records            |
+| Jhon Deere      | 530M records            |
+| Trello          | 15M                     |
+| Twitter         | 5.4M records            |
+| Sumo Logic      | Key leak                |
+| Pokemon Go      | Data exposure           |
+| Peloton         | 4M records              |
+| Yandex          | Hacktivism              |
+| Linkedin        | 700M                    |
+| Tesla Backup    | Data exposure           |
+| First American  | 885M                    |
+| Clubhouse       | 1.3M                    |
+| Tinder          | Data exposure           |
+| Wordle          | Data manipulation       |
+| Duolingo        | 2.6M records            |
+| Echelon         | Data exposure           |
+| 7-Eleven 7Pay   | Account takeover        |
+| Grindr          | Account takeover        |
+| Venmo           | 207M records            |
+| Ring App        | Data exposure           |
+| Plenty of Fish  | Data exposure           |
+| JustDial        | 100M                    |
+=============================================
+
+BREACH ANALYSIS
+
+Rate Limiting = OWASP#4 65%
+Broken Authorization = OWASP#1 60%
+Broken Authentication = OWASP#2 45%
+Excess Data exposure = OWASP#3 30%
+Improper Inventory Mgmt = OWASP#9 9%
+Leaked API Keys = 9%
+Function Authorization = OWASP#5 5%
+Security Misconfiguration = OWASP#8 3%
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+WHY API SECURITY?
+  - It's the right thing to do 
+  - Reduce risk and harm
+  - We have to - compliance
+
+How importan is it ?
+  - Is API security a priority?
+  - Is the business investing in it?
+  - Why now?
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+THREAT MODELING
+
+- Identify: APIs, business flows, data, access paths
+- Assess: vulnerabilities, logic flaws, access controls, 3rd party risk
+- Probability: examine the likelihood of an attack
+- Impract: understand the damage, loss, consequences of an attack
+- Mitigation: develop a plan to address the risk
+
+WHAT DO YOU HAVE THAT ATTACKERS WANT?
+
+- Personal information: consumer data
+- Financial information: banking data, credit cards
+- Corporate data: espionage, IP, corporate data
+- Fraud: financial profit, free use
+- Critical infrastructure: activism, mayhem, terrorism
+
+HOW ARE APIs USED IN YOUR BUSINESS?
+
+- Web site functionality
+- Mobile application
+- Customer/partner API access
+- Internal microservices
+- 3rd party data and services
+
+THREAT MODELING
+
+- Core of every cybersecurity framework
+- Risk = Threat * Vulnerability * Likelihood * Impact
+- Assess the overall risk of each threat and priotitize mitigation 
+
+=============================================================================================
+Threath                 | Vulnerability                 | likelihood  | Impact  | Risk      |
+=============================================================================================
+Unknown APIs            | Unknown APIs may be insecure  | Low         | High    | Moderate  |
+Improper account access | Broken authorization          | High        | High    | High      |
+Data harvesting         | Excess data exposure          | High        | High    | High      |
+=============================================================================================
+
+
