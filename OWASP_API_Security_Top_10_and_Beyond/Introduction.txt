@@ -1,0 +1,65 @@
+WHAT IS OWASP?
+  - OWASP history and background
+  - The rapid rise of APIs
+  - The gap in API security
+  - The leading attack vector
+  - The OWASP API Security Top 10
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+CLASSIC CYBER ATTACK 
+  Reconnaissance => Weaponize => Infiltration => Lateral Movement => Privilege Escalation => Breach
+
+API Attack 
+  Find Vulnerability => Breach
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+DATA ISSUES WITH TOP 10
+  - Bug bounty focuses on certain types of findings
+  - Lack of full details of newsworthy incidents
+  - Bug bounty programs represents a small sample of all APIs 
+  - Does not include unreported API incidents 
+
+API BUG BOUNTY RESEARCH
+  - PentesterLand Writeups Compilation: https://pentester.land/writeups 
+  - HackerOne Hacktivity: https://hackerone.com/hacktivity
+  - Awesome Bugbounty Writeups Repo: https://github.com/devanshbatham/Awesome-Bugbounty-Writeups
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+NEWSWORTHY API INCIDENTS 
+  - 2018 USPS Data Leak
+  - 2019 Venmo Public API Scraping
+  - 2021 Peloton API Data Leak
+  - 2021 Parler API Data Leak
+  - 2021 LinkedIn API Data Leak
+  - 2022 Coinbase Authorization Flaw
+  - 2022 Optus API Data Breach
+  - 2022 Toyota API Exposure
+  - 2023 EatonWorks Toyota Research 
+  - 2023 T-mobile API Data Exposure
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+UPDATE TO THE API SECURITY TOP 10
+
+  API USAGE ACCELERATION
+    - API attacks on the risk: Akamai reported 114M API attacks/day 
+    - 2021 API market value: $2.2B 
+    - 2031 API market value: $41.5B (predicted)
+    - 2022: 46M Postman collections, 3M API repos in github
+
+  The OWASP API Security project updated the top ten list to address some of the changes in the attack trends that have emerged since the previous version. Inon Shkedy, OWASP API Security Project leader, stated that "The OWASP API Top 10 - 2023 version is different from the 2019 version.
+
+  Risk Rating
+  Paired with each OWASP API Security risk category are risk ratings. The risk ratings were based on the OWASP Risk Rating Methodology (Wayback Machine link). The project now refers to The OWASP Risk Rating Framework.
+  
+  |Threat Agents| Exploitability | Weakness Prevalence | Weakness Detectability | Technical Impact | Business Impacts |
+  ===============================|=====================|========================|==================|==================|
+  |             | Easy: 3        | Widespread: 3       | Easy 3                 | Severe 3         |  Business        |
+  |API Specific | Average: 2     | Common: 2           | Average 2              | Moderate 2       |  Specific        |
+  |             | Difficult: 1   | Difficult: 1        | Difficult 1            | Minor 1          |                  |
+  =====================================================================================================================
+
+

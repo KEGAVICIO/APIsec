@@ -1,0 +1,1121 @@
+{
+   "data":[
+      {
+         "Links":[
+            {
+               "Title":"Using an Undocumented Amplify API to Leak AWS Account IDs",
+               "Link":"https://frichetten.com/blog/undocumented-amplify-api-leak-account-id/"
+            }
+         ],
+         "Authors":[
+            "Nick Frichette (@frichette_n)"
+         ],
+         "Programs":[
+            "AWS"
+         ],
+         "Bugs":[
+            "Cloud",
+            "Information disclosure"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2023-03-27",
+         "AddedDate":"2023-03-31"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Easy $$$ via API params manipulation leading to bypassing the email verification block",
+               "Link":"https://medium.com/@bag0zathev2/easy-via-api-params-manipulation-leading-to-bypassing-the-email-verification-block-a45dad2db60c"
+            }
+         ],
+         "Authors":[
+            "Fares Walid (@SirBagoza)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Mass assignment",
+            "Email verification bypass"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2023-03-18",
+         "AddedDate":"2023-03-23"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Unauthenticated GraphQL Introspection and API calls",
+               "Link":"https://medium.com/@osamaavvan/unauthenticated-graphql-introspection-and-api-calls-92f1d9d86bcf"
+            }
+         ],
+         "Authors":[
+            "Osama Avvan (@osamaavvan)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "GraphQL",
+            "Missing authentication"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2023-02-26",
+         "AddedDate":"2023-02-26"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Little bug, Big impact. 25k bounty",
+               "Link":"https://blog.prodefense.io/little-bug-big-impact-25k-bounty-9e47773f959f"
+            }
+         ],
+         "Authors":[
+            "Nightbane (@Nightbanes)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Hardcoded API keys"
+         ],
+         "Bounty":"25,000",
+         "PublicationDate":"2023-02-24",
+         "AddedDate":"2023-02-26"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Insufficient GraphQL API vulnerability due to lack of validation of Authorization Bearer token",
+               "Link":"https://0x1int.gitbook.io/blogs/insufficient-graphql-api-vulnerability-due-to-lack-of-validation-of-authorization-bearer-token"
+            }
+         ],
+         "Authors":[
+            "Int (@intlulz)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "GraphQL",
+            "IDOR"
+         ],
+         "Bounty":"700",
+         "PublicationDate":"2023-02-22",
+         "AddedDate":"2023-02-28"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Bypassing API Restrictions for Fun and Profit",
+               "Link":"https://arnavtripathy98.medium.com/bypassing-api-restrictions-for-fun-and-profit-c9ab746b67be"
+            }
+         ],
+         "Authors":[
+            "Arnav Tripathy"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Payment bypass",
+            "Logic flaw"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2023-02-07",
+         "AddedDate":"2023-03-08"
+      },
+      {
+         "Links":[
+            {
+               "Title":"AWS CloudTrail vulnerability: Undocumented API allows CloudTrail bypass",
+               "Link":"https://securitylabs.datadoghq.com/articles/iamadmin-cloudtrail-bypass/"
+            }
+         ],
+         "Authors":[
+            "Nick Frichette (@frichette_n)"
+         ],
+         "Programs":[
+            "AWS"
+         ],
+         "Bugs":[
+            "Cloud",
+            "Logic flaw",
+            "CloudTrail bypass"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2023-01-17",
+         "AddedDate":"2023-01-18"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Hacking a .NET API in the real world",
+               "Link":"https://danaepp.com/hacking-a-net-api-in-the-real-world"
+            }
+         ],
+         "Authors":[
+            "Dana Epp (@DanaEpp)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "LFI"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2022-12-27",
+         "AddedDate":"2022-12-30"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Owning half of a government assets through AWS",
+               "Link":"https://crypt0g30rgy.github.io/post/AWSTakeover"
+            }
+         ],
+         "Authors":[
+            "g30rgy th3 d4rk (@Crypt0g30rgy)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Information disclosure",
+            "Hardcoded API keys"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2022-12-20",
+         "AddedDate":"2023-01-06"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Unprotected API endpoint at HAwebsso.nl leads to data leak of +15k medical doctor usernames & password hashes",
+               "Link":"https://medium.com/@jonathanbouman/unprotected-api-endpoint-at-hawebsso-nl-5f1951e212fe"
+            }
+         ],
+         "Authors":[
+            "Jonathan Bouman (@JonathanBouman)"
+         ],
+         "Programs":[
+            "HAwebsso.nl"
+         ],
+         "Bugs":[
+            "SSO",
+            "IDOR",
+            "Missing authentication"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2022-12-14",
+         "AddedDate":"2022-12-20"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Firebase: Insecure by Default (feat. that one time our classmates tried to sue us)",
+               "Link":"https://saligrama.io/blog/post/firebase-insecure-by-default/"
+            }
+         ],
+         "Authors":[
+            "Aditya Saligrama (@saligrama_a)",
+            "Miles McCain (@MilesMcCain)",
+            "Cooper de Nicola (@CooperDenicola)"
+         ],
+         "Programs":[
+            "Fizz"
+         ],
+         "Bugs":[
+            "Hardcoded API keys"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2022-11-14",
+         "AddedDate":"2022-11-17"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Breaking Parser Logic: Gain Access To NGINX Plus API — Read/Write Upstreams.",
+               "Link":"https://cyberlix.io/breaking-parser-logic-gain-access-to-nginx-plus-api-read-write-upstreams/"
+            }
+         ],
+         "Authors":[
+            "Cyberlix (@cyberlixio)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Path traversal"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2022-10-12",
+         "AddedDate":"2022-10-12"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Auth Bypass Via Exposed Credentials",
+               "Link":"https://crypt0g30rgy.github.io/post/AuthBypass"
+            }
+         ],
+         "Authors":[
+            "g30rgy th3 d4rk (@Crypt0g30rgy)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Hardcoded API keys"
+         ],
+         "Bounty":"700",
+         "PublicationDate":"2022-10-07",
+         "AddedDate":"2023-02-26"
+      },
+      {
+         "Links":[
+            {
+               "Title":"The forgotten API and XSS filter bypass",
+               "Link":"https://bergee.it/blog/the-forgotten-api-and-xss-filter-bypass/"
+            }
+         ],
+         "Authors":[
+            "Bartłomiej Bergier (@_bergee_)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "XSS"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2022-08-14",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"A Case Study of API Vulnerabilities - Part 2, and Empty Heads",
+               "Link":"https://monke.ie/case-study-part-2/"
+            }
+         ],
+         "Authors":[
+            "Monke (@pmofcats)",
+            "Bend Theory (@bendtheory)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "SSRF",
+            "Path traversal"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2022-07-07",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Microsoft Dynamics Container Sandbox RCE via Unauthenticated Docker Remote API 20,000$ Bounty",
+               "Link":"https://hencohen10.medium.com/microsoft-dynamics-container-sandbox-rce-via-unauthenticated-docker-remote-api-20-000-bounty-7f726340a93b"
+            }
+         ],
+         "Authors":[
+            "Chen Cohen (@chencococococo)"
+         ],
+         "Programs":[
+            "Microsoft"
+         ],
+         "Bugs":[
+            "RCE"
+         ],
+         "Bounty":"20,000",
+         "PublicationDate":"2022-06-01",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Google Maps API Key Unauthorized Use Case",
+               "Link":"https://cupc4k3.co/caso-de-uso-não-autorizados-de-chave-da-api-do-google-maps-89498752cf7d"
+            }
+         ],
+         "Authors":[
+            "Dan Barros"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Information disclosure"
+         ],
+         "Bounty":"100",
+         "PublicationDate":"2022-03-22",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"CVE-2021-4191: GitLab GraphQL API User Enumeration (FIXED)",
+               "Link":"https://www.rapid7.com/blog/post/2022/03/03/cve-2021-4191-gitlab-graphql-api-user-enumeration-fixed/"
+            }
+         ],
+         "Authors":[
+            "Jacob Baines (@junior_baines)"
+         ],
+         "Programs":[
+            "GitLab"
+         ],
+         "Bugs":[
+            "Username enumeration",
+            "GraphQL"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2022-03-03",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"A Case Study of API Vulnerabilities",
+               "Link":"https://monke.ie/api-vulns-casestudy/"
+            }
+         ],
+         "Authors":[
+            "Monke (@pmofcats)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Information disclosure",
+            "Account takeover",
+            "Broken Access Control"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2022-02-20",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Breaking Parser Logic: Gain Access To NGINX Plus API — Read/Write Upstreams.",
+               "Link":"https://zoidsec.medium.com/breaking-parse-logic-gain-access-to-nginx-api-read-write-upstreams-1cb062aa44ca"
+            },
+            {
+               "Title":"Alternative link",
+               "Link":"https://cyberlix.io/breaking-parser-logic-gain-access-to-nginx-plus-api-read-write-upstreams/"
+            }
+         ],
+         "Authors":[
+            "zoid (@z0idsec)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Path traversal"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2022-01-05",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"GHSL-2021-1053: Path traversal in Grafana REST API - CVE-2021-43813, CVE-2021-43815",
+               "Link":"https://securitylab.github.com/advisories/GHSL-2021-1053_Grafana/"
+            }
+         ],
+         "Authors":[
+            "Alvaro Muñoz (@pwntester)"
+         ],
+         "Programs":[
+            "Grafana Labs"
+         ],
+         "Bugs":[
+            "Path traversal"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2021-12-15",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"IDOR Vulnerability In GraphQL Api On Website",
+               "Link":"https://aidilarf.medium.com/idor-vulnerability-in-graphql-api-on-website-bc45e050d1d3"
+            }
+         ],
+         "Authors":[
+            "Aidil Arief"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "IDOR",
+            "GraphQL"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2021-09-03",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Information disclosure via api misconfiguration",
+               "Link":"https://rizwansiddiqu1.medium.com/information-disclosure-via-api-misconfiguration-c05ed327f9d2"
+            }
+         ],
+         "Authors":[
+            "Rizwan_siddiqui (@Rizwan_SiDdiqu1)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Information disclosure"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2021-08-29",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Secret Key Exposure in API Config Directory",
+               "Link":"https://ahmdhalabi.medium.com/secret-key-exposure-in-api-config-directory-79cf7e7b976"
+            }
+         ],
+         "Authors":[
+            "Ahmad Halabi (@Ahmad_Halabi_)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Information disclosure"
+         ],
+         "Bounty":"800",
+         "PublicationDate":"2021-03-01",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Let’s know How I have explored the buried secrets in Xamarin application",
+               "Link":"https://secureitmania.medium.com/lets-know-how-i-have-explored-the-buried-secrets-in-xamarin-application-d6b8c5609c87"
+            }
+         ],
+         "Authors":[
+            "secureITmania (@secureitmania)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Hardcoded API keys",
+            "Information disclosure"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2021-02-21",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"I Own your Cloud Shell: Taking over “Azure Cloud Shell” Kubernetes Cluster Through Unsecured Kubelet API 30,000$ Bounty",
+               "Link":"https://hencohen10.medium.com/i-own-your-cloud-shell-taking-over-azure-cloud-shell-kubernetes-cluster-through-unsecured-558621519cf9"
+            }
+         ],
+         "Authors":[
+            "Chen Cohen (@chencococococo)"
+         ],
+         "Programs":[
+            "Microsoft"
+         ],
+         "Bugs":[
+            "Privilege escalation",
+            "RCE"
+         ],
+         "Bounty":"30,000",
+         "PublicationDate":"2021-02-15",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Write Up: Google VRP N/A – Sandboxed Rce As Root On Apigee API Proxies",
+               "Link":"https://omespino.com/write-up-google-vrp-n-a-sandboxed-rce-as-root-on-apigee-api-proxies/"
+            }
+         ],
+         "Authors":[
+            "Omar Espino (@omespino)"
+         ],
+         "Programs":[
+            "Google"
+         ],
+         "Bugs":[
+            "RCE"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2020-12-19",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Stealing User’s PII info by visiting API endpoint directly",
+               "Link":"https://web.archive.org/web/20201116060315/https://medium.com/@kunal94/stealing-users-pii-info-by-visiting-api-endpoint-directly-5062e0147f67"
+            }
+         ],
+         "Authors":[
+            "Kunal pandey (@kunalp94)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Information disclosure",
+            "Logic flaw"
+         ],
+         "Bounty":"500",
+         "PublicationDate":"2020-11-16",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Exploiting API with AuthToken",
+               "Link":"https://rafi-ahamed.medium.com/exploiting-api-with-authtoken-3bea7b1fb6a9"
+            }
+         ],
+         "Authors":[
+            "Rafi Ahamed (Leonidas D. Ace)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Token leak",
+            "Information disclosure"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2020-11-15",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Cloud firewall management API SNAFU put 500k SonicWall customers at risk",
+               "Link":"https://www.pentestpartners.com/security-blog/cloud-firewall-management-api-snafu-put-500k-sonicwall-customers-at-risk/"
+            }
+         ],
+         "Authors":[
+            "Vangelis Stykas (@evstykas)"
+         ],
+         "Programs":[
+            "SonicWall"
+         ],
+         "Bugs":[
+            "IDOR"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2020-09-02",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Firebase Cloud Messaging Service Takeover: A small research that led to 30k$+ in bounties",
+               "Link":"https://abss.me/posts/fcm-takeover/"
+            }
+         ],
+         "Authors":[
+            "Abss (@absshax)"
+         ],
+         "Programs":[
+            "Google"
+         ],
+         "Bugs":[
+            "Hardcoded API keys",
+            "Information disclosure"
+         ],
+         "Bounty":"30,000",
+         "PublicationDate":"2020-08-17",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Bypassing Google Maps API Key Restrictions",
+               "Link":"https://blog.dixitaditya.com/bypassing-google-maps-api-key-restrictions/"
+            }
+         ],
+         "Authors":[
+            "Aditya Dixit (@zombie007o)"
+         ],
+         "Programs":[
+            "Google"
+         ],
+         "Bugs":[
+            "Logic flaw"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2020-08-08",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"How An API Misconfiguration Can Lead To Your Internal Company Data",
+               "Link":"https://www.secjuice.com/api-misconfiguration-data-breach/"
+            }
+         ],
+         "Authors":[
+            "Me9187 (@Me9187)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Information disclosure"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2020-07-12",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Leveraging an SSRF to leak a secret API key",
+               "Link":"https://jub0bs.com/posts/2020-06-23-ssrf/"
+            }
+         ],
+         "Authors":[
+            "Julien Cretel (@jub0bs)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "SSRF"
+         ],
+         "Bounty":"1,000",
+         "PublicationDate":"2020-06-22",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Google Maps API (Not the Key) Bugs That I Found Over the Years",
+               "Link":"https://medium.com/bugbountywriteup/google-maps-api-not-the-key-bugs-that-i-found-over-the-years-781840fc82aa"
+            }
+         ],
+         "Authors":[
+            "Ozgur Alp (@ozgur_bbh)"
+         ],
+         "Programs":[
+            "Google"
+         ],
+         "Bugs":[
+            "Logic flaw"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2020-04-19",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Hacking SMS API Service Provider of a Company |Android App Static Security Analysis | Bug Bounty POC",
+               "Link":"https://blog.securitybreached.org/2020/02/19/hacking-sms-api-service-provider-of-a-company-android-app-static-security-analysis-bug-bounty-poc/"
+            }
+         ],
+         "Authors":[
+            "Muhammad Khizer Javed (@khizer_javed47)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Information disclosure",
+            "Hardcoded credentials"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2020-02-19",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Bug Bounty: Broken API Authorization",
+               "Link":"https://medium.com/@th3hidd3nmist/bug-bounty-broken-api-authorization-d30c940ccb42"
+            }
+         ],
+         "Authors":[
+            "Th3hidd3nmist (@th3_hidd3n_mist)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Authorization flaw"
+         ],
+         "Bounty":"440",
+         "PublicationDate":"2019-11-12",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Rights Manager Graph API Disclosure of business employee to non business employee",
+               "Link":"https://www.updatelap.com/2019/08/Rights-Manager-Graph-API-Disclosure-of-business-employee-to-non-business-employee.html"
+            }
+         ],
+         "Authors":[
+            "Jafar Abo Nada (@Jafar_Abo_Nada)"
+         ],
+         "Programs":[
+            "Meta / Facebook"
+         ],
+         "Bugs":[
+            "Information disclosure"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2019-08-22",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Privilege Escalation using Api endpoint",
+               "Link":"https://medium.com/@ronak_9889/privilege-escalation-using-api-endpoint-fce841caaff3"
+            }
+         ],
+         "Authors":[
+            "Ronak Patel (@ronak_9889)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Privilege escalation"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2019-08-09",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Full Account Takeover via Changing Email And Password of any User through API Parameters",
+               "Link":"https://web.archive.org/web/20201008153910/https://medium.com/@adeshkolte/full-account-takeover-changing-email-and-password-of-any-user-through-api-parameters-3d527ab27240"
+            }
+         ],
+         "Authors":[
+            "Adesh Nandkishor kolte (@AdeshKolte)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "IDOR",
+            "Password reset",
+            "Account takeover"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2019-07-26",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Parameter Pollution issue in API resulting $XXX",
+               "Link":"https://smaranchand.com.np/2019/06/parameter-pollution-issue-in-api-resulting-xxx/"
+            }
+         ],
+         "Authors":[
+            "Smaran Chand (@smaranchand)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "HTTP parameter pollution"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2019-06-17",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Fullscreen API Attack’s Revisited and the FaceBook NA Story",
+               "Link":"https://medium.com/bug-bounty-hunting/fullscreen-api-attacks-revisited-and-the-fb-na-story-cbea3ca383c5"
+            }
+         ],
+         "Authors":[
+            "Circle Ninja (@circleninja)"
+         ],
+         "Programs":[
+            "Meta / Facebook"
+         ],
+         "Bugs":[
+            "Phishing"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2019-06-15",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Multiple API issues due to Fixed Authorization token.",
+               "Link":"https://medium.com/@mustafakhan_89646/multiple-api-issues-due-to-fixed-authorization-token-17365056f17a"
+            }
+         ],
+         "Authors":[
+            "Mustafa Khan (@by6153)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Authorization flaw"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2019-05-24",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Web Cache Deception to API endpoint attack using cached token header",
+               "Link":"https://medium.com/@kunal94/web-cache-deception-to-api-endpoint-attack-using-cached-token-header-b01a604a5ccd"
+            }
+         ],
+         "Authors":[
+            "Kunal pandey (@kunalp94)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Web cache deception"
+         ],
+         "Bounty":"250",
+         "PublicationDate":"2019-04-13",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Leaked Salesforce API access token at IKEA.com",
+               "Link":"https://medium.com/@jonathanbouman/leaked-salesforce-api-access-token-at-ikea-com-132eea3844e0"
+            }
+         ],
+         "Authors":[
+            "Jonathan Bouman (@JonathanBouman)"
+         ],
+         "Programs":[
+            "Ikea"
+         ],
+         "Bugs":[
+            "Information disclosure"
+         ],
+         "Bounty":"250",
+         "PublicationDate":"2019-04-04",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"How Misconfigured API leaked user private information?",
+               "Link":"https://medium.com/@Skylinearafat/how-misconfigured-api-leaked-user-private-information-e3e8c13e52e4"
+            }
+         ],
+         "Authors":[
+            "Yeasir Arafat"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "IDOR",
+            "Authorization flaw"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2018-10-26",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Reflected XSS in Django REST Framework Api at MapBox Subdomain",
+               "Link":"https://web.archive.org/web/20200929012934/https://www.mohamedharon.com/2018/08/mapboxxss.html"
+            }
+         ],
+         "Authors":[
+            "Mohamed Haron (@m7mdharon)"
+         ],
+         "Programs":[
+            "Mapbox"
+         ],
+         "Bugs":[
+            "Reflected XSS"
+         ],
+         "Bounty":"500",
+         "PublicationDate":"2018-08-29",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Hey Developer, Give me your API keys.!!",
+               "Link":"https://medium.com/devanshwolf/hey-developer-give-me-your-api-keys-b8c99ab1c4f5"
+            }
+         ],
+         "Authors":[
+            "Devansh batham (@devanshwolf)"
+         ],
+         "Programs":[
+            "Crowdin"
+         ],
+         "Bugs":[
+            "Information disclosure"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2018-07-18",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"#BugBounty — API keys leakage, Source code disclosure in India’s largest e-commerce health care company.",
+               "Link":"https://medium.com/bugbountywriteup/bugbounty-api-keys-leakage-source-code-disclosure-in-indias-largest-e-commerce-health-care-c75967392c7e"
+            }
+         ],
+         "Authors":[
+            "Avinash Jain (@logicbomb_1)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "Path traversal"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2018-02-25",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Abusing internal API to achieve IDOR in New Relic",
+               "Link":"https://www.jonbottarini.com/2018/01/02/abusing-internal-api-to-achieve-idor-in-new-relic/"
+            }
+         ],
+         "Authors":[
+            "Jon Bottarini (@jon_bottarini)"
+         ],
+         "Programs":[
+            "New Relic"
+         ],
+         "Bugs":[
+            "IDOR"
+         ],
+         "Bounty":"1,000",
+         "PublicationDate":"2018-01-02",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Hey UserID x, what’s your secret token? Broken API enables me to leak/modify any users personal information",
+               "Link":"https://zseano.medium.com/fun-with-mobile-apps-broken-api-leads-to-leak-of-millions-of-personal-information-e7eb0b9dcce7"
+            },
+            {
+               "Title":"Alternative link",
+               "Link":"https://blog.bugbountyhunter.com/user-id-leak/"
+            }
+         ],
+         "Authors":[
+            "Zseano (@zseano)"
+         ],
+         "Programs":[
+            "-"
+         ],
+         "Bugs":[
+            "IDOR",
+            "Account takeover"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2017-07-13",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Fabric.io API permission apocalypse – Privilege Escalations",
+               "Link":"https://wesecureapp.com/blog/fabric-io-api-permission-apocalypse-privilege-escalations"
+            }
+         ],
+         "Authors":[
+            "WeSecureApp (@wesecureapp)"
+         ],
+         "Programs":[
+            "Twitter"
+         ],
+         "Bugs":[
+            "Authorization flaw",
+            "Account takeover"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2017-07-10",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Leaking API keys in Bing Maps Portal",
+               "Link":"https://medium.com/bugbountywriteup/how-i-got-listed-in-microsoft-hall-of-fame-8f96ca4535c2"
+            }
+         ],
+         "Authors":[
+            "Sai Krishna Kothapalli (@kmskrishna)"
+         ],
+         "Programs":[
+            "Microsoft"
+         ],
+         "Bugs":[
+            "IDOR"
+         ],
+         "Bounty":"-",
+         "PublicationDate":"2015-12-31",
+         "AddedDate":"2022-09-15"
+      },
+      {
+         "Links":[
+            {
+               "Title":"Flickr API Explorer – Force users to execute any API request.",
+               "Link":"https://buer.haus/2015/02/03/flickr-api-explorer-force-users-to-execute-any-api-request/"
+            }
+         ],
+         "Authors":[
+            "Brett Buerhaus (@bbuerhaus)"
+         ],
+         "Programs":[
+            "Flickr"
+         ],
+         "Bugs":[
+            "CSRF"
+         ],
+         "Bounty":"100",
+         "PublicationDate":"2015-02-03",
+         "AddedDate":"2022-09-15"
+      }
+   ]
+}
