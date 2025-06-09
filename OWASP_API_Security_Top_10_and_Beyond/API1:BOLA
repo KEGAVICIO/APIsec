@@ -1,0 +1,30 @@
+BROKEN OBJECT LEVEL AUTHORIZATION
+
+Attack Vector Description
+  Attackers can exploit API endpoints that are vulnerable to broken object-level authorization by manipulating the ID of an object that is sent within the request. Object IDs can be anything from sequential integers, UUIDs, or generic strings. Regardless of the data type, they are easy to identify in the request target (path or query string parameters), request headers, or even as part of the request payload.
+
+Security Weakness Description
+  This has been the most common and impactful attack on APIs. Authorization and access control mechanisms in modern applications are complex and widespread. Even if the application implements a proper infrastructure for authorization checks, developers might forget to use these checks before accessing a sensitive object. Access control detection is not typically amenable to automated static or dynamic testing.
+
+Impacts Description
+  Unauthorized access can result in data disclosure to unauthorized parties, data loss, or data manipulation. Unauthorized access to objects can also lead to full account takeover.
+
+
+Bola Example
+
+ Authenticated user Bruce accessing his own record:
+ herohospital.com/api/v3/users?id=2727
+
+ Authenticated user Bruce accessing another patient's record:
+ herohospital.com/api/v3/users?id=2728
+
+Accessing Resources
+  If APIs presnt request like we see, try to access similar object to find vulnerabilities 
+
+
+Preventative Measures
+
+  - Implement a proper authorization mechanism that relies on the user policies and hierarchy.
+  - Use the authorization mechanism to check if the logged-in user has access to perform the requested action on the record in every function that uses an input from the client to access a record in the database.
+  - Prefer the use of random and unpredictable values as GUIDs for records' IDs.
+  - Write tests to evaluate the vulnerability of the authorization mechanism. Do not deploy changes that make the tests fail.
