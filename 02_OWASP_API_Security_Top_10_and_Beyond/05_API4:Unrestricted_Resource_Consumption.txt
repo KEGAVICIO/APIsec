@@ -1,0 +1,45 @@
+Unrestricted Resource Consumption
+ - Formerly "Lack of Resources and Rate Limiting" (OWASP 2019) 
+
+Attack Vector Description
+  - Exploited via simple API request
+  - Multiple request from single source, or across clouds
+  - Automated tools simulate DoS via high traffic loads
+
+Security Weakness Description
+  - APIs commonly do not limit interactions or resource limits
+  - Test for resource consumption weakness via:
+    - API requests that specify resource quantities
+    - Analyzing response status/time/length
+  - Also valid for batched operations
+  - Evaluate cost impact based on service provider pricing
+
+Impacts Description 
+  - Exploitation can lead to Denial of service
+  - Economic impact due to higher infrastructure demands
+
+Sources of Vulnerability
+  Missing/inappropriate setting:
+    - Execution timeouts
+    - Max allocable memory
+    - Max number of file description 
+    - Max number of processes
+    - Max upload file size
+    - # of operations in single request 
+    - # of records in single request
+    - 3rd party provider's spend limit 
+
+Summary 
+  - Every API request has technical & financial cost
+  - Lack of rate controls increase risk of:
+    - Denial of service 
+    - Unnecessary financial cost
+    - Degradation of service to users
+
+OWASP Preventative Measures
+  - Docker offers controls for memory, CPU, restarts, file descriptors, processes
+  - LImit number of API calls within timeframe
+  - Notify client when limit is exceeded
+  - Add server-side validation for inputs
+  - Define, enforce max size for inputs & paylods
+
