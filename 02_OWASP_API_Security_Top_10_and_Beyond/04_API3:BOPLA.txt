@@ -1,0 +1,49 @@
+Excessive Data Exposure
+  - API responds with an entire data object
+  - Usually APIs filter data to what is being requested
+  - Relying on consumer/UI to filter creates risk of exposing sensitive information
+
+Mass Assignment
+  - Mass Assignment allows user input to alter sensitive object properties
+  - E.g., API uses a special property to create admin accounts
+    - Only authorized users should be able to make requests
+    - If no restrictions in place then attacker could elevate privileges and perform administrative actions
+
+  API3:2019 Excessive Data Exposure + API6:2019 Mass Assignment = API3:2023 Broken Object Property Level Authorization
+
+Attack Vector Description
+  "APIs tend to expose endpoints that return all object's properties. This is particularly valid for REST APIs. For other protocols such as GraphQL, it may require crafted requests to specify which properties should be returned. Identifying these additional properties that can be manipulated requires more effort, but there are a few automated tools available to assist in this task."
+
+Security Weakness Description
+  "Inspecting API responses is enough to identify sensitive information in returned objects' representations. Fuzzing is usually used to identify additional (hidden) properties. Whether they can be changed is a matter of crafting an API request and analyzing the response. Side-effect analysis may be required if the target property is not returned in the API response."
+
+Impacts Description 
+  "Unauthorized access to private/sensitive object properties may result in data disclosure, data loss, or data corruption. Under certain circumstances, unauthorized access to object properties can lead to privilege escalation or partial/full account takeover"
+
+BOPLA Vulnerabilities
+  - The API endpoint exposes properties of an object that are considered sensitive and should not be read by the user. (previously named: "Excessive Data Exposure")
+  - The API endpoint allows a user to change, add/or delete the value of a sensitive object's property which the user should not be able to access (previously named: "Mass Assignment")
+
+Excessive Data Exposure
+  - Excessive data exposure is when API responds with more information than needed
+  - Often occurs when the consumer is expected to filter results
+
+Test for Data Exposure
+  - Excessive Data Exposure is very difficult to detect with automated scanners
+  - Often bypasses every security control in place to protect sensitive information
+  - Can deliver sensitive data to an attacker simply because they use the API
+  - API providers must test API enpoints and review information in response
+
+Mass Assignment
+  - API consumer includes more parameters than the application intended
+  - Application adds these parameters to code variables or internal objects
+  - A consumer may be able to edit object properties or escalate privileges
+
+OWASP Preventative Measures
+  - Always make sure users should have access to the object's properties
+  - Avoid using generic methods such as to_json() and to_string()
+  - Avoid functions that automatically bind input into code variables, objects, or properties
+  - Only allow changes to object's properties that should be update by the client
+  - Implement response validation mechanism as an extra layer of security
+  - Define and enforce data returned by all API methods
+  - Minimize returned data structures, according to the business/functional requirements

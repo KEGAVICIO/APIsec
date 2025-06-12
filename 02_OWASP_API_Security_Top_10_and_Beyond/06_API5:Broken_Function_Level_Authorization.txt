@@ -1,0 +1,51 @@
+BOLA vs BFLA
+  BOLA:
+    UserA able to view UserB's account
+  BFLA:
+    UserA able to TRANSACT on UserB's account
+
+Attack Vector Description
+  "Explotation requires the attacker to send legitimate API calls to an API enpoint that they should not have access to as anonymous users or regular, non-privileged users. Exposed enpoints will be easily exploited"
+
+Security Weakness Description
+  "Authorization checks for a function or resource are usually managed via configuration or code level. Implementing proper checks can be confusing task since modern applications can contains many types of roles, groups and complex user hierarchies (e.g., sub-users, or users with more than one role). It's easier to discover these flaws in APIs since APIs are more structured and accessing diferent functions is more predictable"
+
+Impacts Description 
+  "Such flaws allow attackers to access unauthorized functionality. Administrative functions are key targets for this type of attack and may lead to data disclosure, data loss, or data corruption. Ultimately, it may lead to service disruption"
+
+BFLA Vulnerability
+  - User of one privilege level can use functionality if another user
+  - API providers often have fifferent privilege levels
+    - Public users, merchants, partners, vendors, admins, ...
+  - Can be explouted for: 
+    - Unauthorized use of laterla functions
+    - Privilege escalation
+  - Targeted API functions-endpoints with: 
+    - Sensitive information
+    - Resources that belong to another group 
+    - Administrative functionality like user account management
+
+BFLA Example
+  - Different enpoints for privileged actions 
+    - /{userid}/account/balance - user account information
+    - /admin/account/{userid} - administrator enpoint 
+  - Admin enpoint can be exploited if API has improper access controls
+    - An attacker can perform admin actions, account takeover
+  - APIs don't always have admin enpoints
+    - HTTP request methods can control access to functionality
+    - E.g., GET, POST, PUT and DELETE
+  - Attack can exploit unrestricted methods to exploit API functionality
+
+Testing for BFLA
+  - Identify endpoints an attacker could use to their advantage, e.g.,.:
+    - Altering user accounts
+    - Deleting user Resources
+    - Gaining access to restricted enpoints
+
+OWASP Preventative Measures
+  - Have consistent, easy-to-analyze authorization module for all business functions
+  - Deny all access by default, require explicit grants to specific roles for access to every function
+  - Review enpoints against function level authorizatino flaws
+  - Ensure admin controllers inherit from an administrative abstract controller that implements authorization checks based on the user's group/role
+  - Ensure admin functions inside a regular controller implement authorization checks based on the user's group/role
+
