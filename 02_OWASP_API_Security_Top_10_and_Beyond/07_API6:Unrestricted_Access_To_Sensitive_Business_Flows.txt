@@ -1,0 +1,20 @@
+Attack Vector Description
+  "Exploitation usually involves understanding the business model backend by the API, findinf sensitive business flows, and automating access to these flows, causing harm to the business"
+
+Security Weakness Description
+  "Lack of a holistic view of the API in order to fully support business requirements tends to contribute to the prevalence of this issue. Attackers manually identify what resources (e.g. endpoints) are involved in the target workflow and how they work together. If mitigation mechanisms are already in place attackers need to find a way to bypass them"
+
+Impacts Description
+  "In general technical impact is not expected. Explotation might hurt the business in different way, for example: prevent legitimate users from purchasing a product or lead to inflation in the internal economy of a game"
+
+OWASP Preventative Measures
+  - The mitigation planning should be done in two layers:
+    - Buisiness - identify the business flows that might harm the business if they are excessively used
+    - Engineering - choose the right protection mechanisms to mitigate the business risk
+  - Slow down automated threats
+    - Device fingerprinting: deny service to unexpected client devices
+    - Human: detection use captcha or more advanced biometic solutions
+    - Non-human patterns: analyze traffic to detect non-human patterns
+    - Consider blocking IP addresses of Tor exit nodes, well-known proxies
+  - Secure an limit access to APIs consumed directly by machines
+

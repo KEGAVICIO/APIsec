@@ -1,0 +1,35 @@
+SSRF: Server Side Request Forgery
+
+Attack Vector Description
+  "Exploitation requieres the attacker to find an API endpoint that accesses a URI thats provided by the client. In general, basic SSRF (When the response is returned to the attacker), is easier to exploit than Blind SSRF in which the attacker has no feedback on whether or not the attack was successful"
+
+Security Weakness Description
+  "Modern concepts in application development encourage developers to access URIs provided by the client. Lack of or improper validation of such URIs are common issues. Regular API request and response analysis will be required to detect the issue. When the response is not returned Blind SSRF detecting the vulnerabiulity requires more effort and creativity"
+
+Impacts Description
+  "Successfull exploitation might lead to internal servides enumeration (e.g. port scanning), information disclosure, bypassing firewalls or other security mechanisms. In some cases it can lead to DoS or the server being used as a proxy to hide malicious activities"
+
+SSRF Summary
+  - App retrieves remote resources without input validation
+  - Attacker can then control what resources a server requests
+  - Allows attackers to access sensitive data, compromise host
+  - Attacker leverages target server to process their requests
+  - SSRF bug bounty payouts based on level of impact 
+
+SSRF Types
+  - In-BAnd SSRF
+    Server responds with resources specified by user
+  - Out-of-Band SSRF "Blind"
+    Server does not deliver information from specified URL
+
+OWASP Preventative Measures
+  - Isolate the resource fetching mechanism in your network
+  - Use allow list of:
+    1) remote origins
+    2) Url schemes, ports
+    3) Accepted media types
+  - Disable HTTP redirections
+  - Use URL parser
+  - Validate and sanitize all client-supplied input data
+  - Do not send raw responses to clients 
+

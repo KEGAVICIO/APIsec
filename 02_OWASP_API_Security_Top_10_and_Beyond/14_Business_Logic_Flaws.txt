@@ -1,0 +1,60 @@
+Attack Vector Description
+  - Business logic vulnerabilities are unique to each application
+  - Exploit normal functioning of an apps business processes
+  - Often require specific knowledge of the apps functionality
+  - No one-size-fits-all approach to identifying them
+
+Security Weakness Description
+  - Business logic flaws aries when business process rules arent properly enforced
+  - Allows users to manipulate app functionality to harm the business
+  - Typically occurs when developers fail to anticipate how features can be misused
+  - Often due to
+    - Lack of comprehensive understanding apps business logic
+    - Lack of input validation
+    - Incomplete function-level authorization checks
+
+Impacts Description
+  Business logic vulnerabilities can cause a variety of technical impacts, depending on the specific flaw and the systems involved. These impacts can range from unauthorized access to data or functionality to a total bypass of system controls
+
+Summary
+  - Business logic flaws (BLF) are misuse/abuse of intended app functionality
+  - Example, an API allows only upload certain encoded payloads
+    - But doesn't validate the encoded payloads
+    - Allowing a user could upload any encoded file 
+    - Users to upload and potentially execute arbitrary code
+  - BLF come from assumption that API consumers will follow direction, be trustworthy, or only use the API in a certain way
+  - Organizations rely on trust as a security control, expecting users to act benevolently
+  - Unfortunately, even good-natured API consumers make mistakes
+
+BLF Example 
+  - Experian partner API leak: example of an API trust failure
+  - Experian partner authorized to use Experians API to perform credit checks 
+  - Partner added the APIs credit check functionality to their web application 
+  - Inadvertently exposed all partner-level requests to users
+  - Request could be intercepted, Experian API would respond with credit scores
+  - Experian trusted the partner to not expose the API
+
+Finding Vulnerabilities 
+  - Credential (API keys, tokens, passwords) constantly stolen and leaked
+  - Logic vulnerabilities often have most significant impact 
+  - Examine API documentation for signs of business logic vulnerabilities 
+    Statements like:
+      - "Only use feature X to perform function Y"
+      - "Do not do X with endpoint Y"
+      - "Only admins should perform request X"
+  - These statements may indicate reliance on trust
+  - Attacker will disobey such requests and to test for technical security controls
+
+Bypassing Web UIs
+  - Cannot assume users will exclusively use a browser
+  - Attacker can easily intercept requests and alter the API request
+  - This could allow attackers to capture shared API keys or abuse parameters
+  - Attacker could bypass MFA by simply altering the parameter MFA to false
+
+Preventative Measures
+  - Use a Threat Modeling approach
+  - Reduce or remove trust relationships
+  - Train developers to understand and avoid business logic vulnerabilities
+  - Implement a bug bounty program, third-party penetration testing, or a responsible disclosure policy
+
+
