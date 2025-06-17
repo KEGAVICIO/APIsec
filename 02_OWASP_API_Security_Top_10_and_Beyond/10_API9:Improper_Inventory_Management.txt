@@ -1,0 +1,59 @@
+Attack Vector Description
+  "Threat agents usually get unauthorized access through old API versions or endpoints left running unpatched and using weaker security requirements. Alternatively, they may get access to sensitive data through a 3rd party with whom theres no reason to share data with"
+
+Security Weakness Description
+  "Outdated documentation makes it more difficult to find and/or fix vulnerabilities. Lack of assets inventory and retirement strategies leads to running unpatched systems, resulting in leakage of sensitive data. It's common to find unnecessarily exposed API hosts because of modern concepts like microservices, which make applications easy to deploy and independent (eg. cloud computing, K8S). Simple Google Dorking, DNS enumeration, or using specialized search engines for various types of servers (webcams, routers, servers, etc.) connected to the internet will be enough to discover targets"
+
+Impacts Descroption
+  "Attackers can gain access to sensitive data, or even take over the server. Sometimes different API versions/deployments are connected to the same database with real data. Threat agents may exploit deprecated enpoints available in old API versions to get access to administrative functions or exploit known vulnerabilities"
+
+Summary
+  - Improper Inventory Management exposes unsupported APIs 
+  - Old API versions are more likely to contain vulnerabilities
+  - Can lead to other vulnerabilities:
+    - Excessive data exposure, information disclosure, mass assignment, improper rate-limiting, API injection
+
+Detecting Improper Inventory
+  - Test with outdated API documentation, changelogs, and version history on repositories
+  - Version information in endpoints: /v1/, /v2/, /v3/
+  - APIs in development paths: /alpha/, /beta/, /test/, /uat/, /demo/
+
+Discovering Improper Inventory 
+  - Techniques: guessing, fuzzing, or brute force requests
+  - Testing focuses on unsupported and non-production API versions
+  - Typical new version paths:
+    - api.target.com/v3
+    - /api/v2/accounts
+    - /api/v3/accounts
+    - /v2/accounts
+
+  - API versioning could also be maintained as header:
+    - Accept: version=2.0
+    - Accept api-version=3
+
+  - Version can be set within query parameter or request body:
+    - /api/accounts?ver=2 
+    - POST /api/accounts
+      {
+        "ver":1.0,
+        "user":"hapihacker"
+      }
+
+  - Non-production API version examples:
+    - api.test.target.com
+    - api.uat.target.com
+    - beta.api.com
+    - /api/private
+    - /api/partner
+    - /api/test
+
+OWASP Preventative Measures
+  - Inventory, document all API hosts and the API versions
+  - Inventory, document integrated services - role, data flow, sensitivity
+  - Document API details: authentication, errors, redirects, rate limiting, CORS, endpoints (parameters, request and responses)
+  - Auto-generate documentation and include in CI/CD
+  - Make API documentation available authorized consumers
+  - Use external API protection firewalls for all versions, not just current
+  - Avoid using production data with non-production API deployments
+  - Perform risk analysis when publishing newer versions of APIs
+

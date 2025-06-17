@@ -1,0 +1,24 @@
+Attack Vector Description
+  "Attackers take advantage of lack of logging and monitoring to abuse systems without being noticed"
+
+Security Weakness Description 
+  "Without logging and monitoring, or with insufficient logging and monitoring, it is almost impossible to track suspicious activities and respond to them in a timely fashion"
+
+Impacts Description
+  "Without visibility over ongoing malicious activities, attackers have plenty of time to fully compromise systems"
+
+Summary 
+  - Logs reveal patterns in API usage, can also identity abuse
+  - Logs provide audit trail of activities
+  - Often required for compliance purposes Ensure logs cannot be altered by attackers
+  - Monitoring helps detect suspicious activities, anomalous behavior
+
+OWASP Preventative Measures
+  - Log failed authentication, denied access, input validation errors
+  - Write logs for a log management solution, include detail to identify malicious actor
+  - Logs should be handled as sensitive data
+  - COntinuously monitor infrastructure, network, API functioning
+  - Use a Security Information and Event Management (SIEM)
+  - Configure custom alerts to detect suspicious activities earlier
+
+

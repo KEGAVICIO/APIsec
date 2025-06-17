@@ -1,0 +1,28 @@
+Attack Vector Description
+  "Attackers will feed the API with malicious data through whatever injection vectors are available (eg. direct input, parameters integrated services, etc.), expecting it to be sent to an interpreter"
+
+Security Weakness Description
+  "Injection flaws are very common and are often found in SQL, LDAP, or NoSQL queries, OS commands, XML parsers and ORM. These flaws are esasy to discover when reviewing the source code Attackers can use scanners and fuzzers"
+
+Impacts Description 
+  "Injection can lead to information disclosure and data loss. It may also lead to DoS, or complete host takeover"
+
+Summary
+  - Injections occur when APIs dont filter input to remove unwanted characters
+  - Infrastructure might treat data from the request as code and run it 
+  - Enables: SQL injection, NoSQL injection, system command Injection
+  - Example:
+    - Attacker sends SQL commands in payload to vulnerable API 
+    - API passes commands to the databse, which performs the commands
+  - Clues: verbose error messaging, HTTP response codes, unexpected behavior
+
+OWASP Preventative Measures
+  - Perform data validation
+  - Validate, filter, and sanitize all client-provided data
+  - Escape all special characters
+  - Prefer a safe API that provides a parameterized interface
+  - Limit number returned records to prevent mass disclosure
+  - Validate incoming data, only allow valid values
+  - Define data types and strict patterns for all string parameters
+
+

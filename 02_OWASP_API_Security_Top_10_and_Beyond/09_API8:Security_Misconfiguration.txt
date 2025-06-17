@@ -1,0 +1,87 @@
+Attack Vector Description
+  "Attackers will often attempt to find unpatched flaws, common endpoints, or unprotected files and directories to gain unauthorized access or knowledge of the system"
+
+Security Weakness Description
+  "Security misconfiguration can happen at any level of the API stack, from the network level to the application level. Automated tools are available to detect and exploit misconfiguration such as unnecessary service or legacy options"
+
+Impacts Description
+  "Security misconfigurations can not only expose sensitive user data, but also system details that can lead to full server compromise"
+
+Misconfiguration Examples
+  - Misconfigured headers
+  - Misconfigured transit encryption
+  - Use of default accounts
+  - Acceptance of unnecessary HTTP methods
+  - Lack of inputs sanitization
+  - Verbose error messaging
+
+API Header misconfiguration
+  - API providers use headers for handling response and security requirements
+  - Misconfigured headers can result in sensitive information disclosure, downgrade attacks and cross-site scripting attacks
+  - Many APIs use additional services to enhance metrics and Security
+
+X-Powered-By Header
+  - Reveals backend technology
+  - Often advertise the exact supporting service and its version
+  - Useful to find exploits published for that version of software
+
+X-XSS-Protection Header
+  - Prevents Cross-Site Scripting (XSS) attacks
+  - COmmon type of injection vulnerability
+  - Insert scripts to trick end-users to click malicious links
+  - Value of 0 indicates no protections, 1 indicates protection enabled
+  - Header clearly reveals whether a security control is in place
+
+X-Response-Time Header
+  - X-Response-Time header is middleware that provides usage metric
+  - If API isn't configured properly this header reveal existing resources
+  - X-Response-Time may differ for existing vs non-existing records
+  - Example:
+    - /users/account/thisdefinitelydoesnotexist - response time 25.5ms 
+    - /users/account/1021 (valid account)       - response time 5140ms
+
+Transport Layer security
+  - APIs with sensitive info should use Transport Layer Security
+  - TLS is fundamental way to protect data communication
+  - Misconfigured encryption can pass sensitive API information in cleartext
+  - Attacker could capture the responses and requests MITM attacks
+
+Default Accounts & Credentials
+  - Attackers will attempt default Credentials
+  - Could allow:
+    - Access to sensitive information
+    - Access to administrative functionality 
+  - Potencially lead to compromise of supporting systems
+
+HTTP methods
+  - Unnecessary HTTP methods can increase risk 
+  - Application may not handle these mathods properly 
+  - Portential disclosure fo sensitive information
+
+Testing for misconfigurations
+  - Some Security Misconfigurations can be detected by web app scanners
+  - Automated scanners will automatically check responses to determine:
+    - Version information
+    - headers
+    - Cookies
+    - Transit encryption configuration
+    - Parameters
+  - Security misconfigurations can also be checked manually
+
+OWASP Preventative Measures
+  - Repetable hardening process for a properly locked down environment
+  - Reviw and update configurations across the entire API stack, including:
+    - Orchestration files
+    - API components
+    - Cloud services (eg. S3 bucket permissions)
+  - Automated, continuous assessment of configuration/setting effectiveness
+  - Ensure all API communications between client and API server is encrypted
+  - Specify which HTTP verbs each API accepts; disable all others
+  - APIs accessible from browser-based clients should:
+    - Implement Cross-Origin Resource Sharing (CORS) policy
+    - Include applicable Security headers
+  - Restrict incoming content types/data formats to those that meet requirements
+  - Ensure all servers in the HTTP chain process incoming request in uniform manner
+  - Define, enforce all API responses to prevent exception traces and other valuable info 
+
+

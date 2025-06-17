@@ -1,0 +1,21 @@
+Attack VEctor Description
+  "Exploiting this issue requires attackers to identify and potentially compromise other APIs/services the target API integrated with. Usually this information is not publicly acailable or the integrated API/service is not easily exploitable."
+
+Security Weakness Description
+  "Developers tend to trust and not verify the endpoints that interact with external or third-party APIs, relying on weaker security requirements such as those regarding transport security, authentication/authorization and input validation and sanitization. Attackers need to identify services the target API integrates with (data sources) and, eventually, compromise them"
+
+Summary
+  - Most of API top 10 focuses on API provider
+  - APIs often path of least resistance
+  - If attacker compromises 3rd party API, then other businesses at risk
+  - If API uses unencrypted connection then data exposed in clear text
+  - 3rd party APIs may have less stringent security standards
+  - Could also be vulnerable to injection, authorization, other attacks 
+
+OWASP Preventative Measures
+  - Assess API security of service providers
+  - Ensure all API is encrypted
+  - Always validate, sanitize data received 3rd party APIs 
+  - Do not blindly follow redirects
+
+
