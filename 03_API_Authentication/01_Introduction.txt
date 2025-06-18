@@ -1,0 +1,74 @@
+The variants of API Authentication
+  - Basic authentication 
+  - API Keys
+  - Certificate based authentication 
+  - Token based authentication
+  - Token based authentication and authorization
+
+Authentication vs Authorization 
+
+Who are you - Authentication 
+What are you allowed to do - Authorization
+
+Basic Authentication 
+  - The HTTP Authorization header using the Basic scheme 
+  - Username and password
+  - Hard to convey user identity, only machine identiy 
+
+API Keys 
+  - No standard way of presenting API keys, usually HTTP header
+  - Username and password at once
+  - Only machine identiy
+
+TLS Authentication 
+  - Using mutual TLS for authentication 
+  - HTTPS requires only server (API) to present a Certificate
+  - With Mutual TLS both parties present certificates to authenticate themselves
+  - Conveys machine identities
+
+Token Based Authentication 
+  - A trusted 3rd party issues tokens
+  - Token are used to authenticate the caller
+  - Can expire
+  - Can have an audience
+  - The API trusts the issuer of the token 
+  - Can convey both user and machine identity 
+
+Token Based Authentication and Authorization 
+  - Tokens can convey more information than caller id 
+  - Additional details can be used for authorization 
+  - A token may be valid, but no "powerful" enough to provide access
+  - OAuth use scopes, OpenID Connect adds claims
+
+OpenID Connect vs OAuth
+
+  - OAuth is a delegation protocol
+    - API Access is the main goal 
+
+  - OpenID Connect is an Identity layer atop of OAuth
+    - Defines user authentication metadata
+    - Can control authentication
+    - Federation
+
+History
+  - OAuth 1 - IETF standard 2010
+    - Driven by Twitter and Google
+    - Relied heavily on signing
+    - Did not require HTTPS
+    - Hard to implement clients
+
+  - OAuth 2.0 IETF standard late 2012
+    - Does not rely on signing
+    - Requires HTTPS
+    - Easy to implement clients
+    - Currently wide adoption
+    - OAuth 2.1 underway 
+
+Summary
+  - Machine level authentication is different from user level authentication
+    - Both are often needed
+    - Can be combined
+  - OAuth uses token based authentication 
+    - Provides a token based architecture
+  - OAuth 2.0 requires HTTPS (TLS)
+
