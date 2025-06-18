@@ -1,0 +1,34 @@
+OAuth Code Flow
+  OAuth flows (also called grants or interaction patterns) define how a client obtains a token to access APIs.
+  The choice of flow depends on the type of application you are building.
+
+  1. Authorization Code Flow (with PKCE)
+    Typical use: Web or mobile applications with human users.
+    Participants: User, client (app), authorization server, and resource server.
+
+    Key steps:
+      - The user accesses the app and is redirected to the authorize endpoint.
+      - Parameters such as response_type=code, client_id, scope, state, and code_challenge (PKCE) are sent.
+      - The user is authenticated (the method depends on the server).
+      - The client is redirected with an authorization code and the state.
+      - The client makes a POST to the token endpoint with the code, client_secret, and code_verifier to obtain:
+      - Access token (short-lived, ~5 min)
+      - Refresh token (to obtain new access tokens without re-authenticating the user)
+
+  2. Refresh Token Flow
+    Use: Renew access tokens when they expire, without disturbing the user.
+    Steps:
+    - The client makes a POST to the token endpoint with:
+        - grant_type=refresh_token
+        - client_id, client_secret
+        - refresh_token
+    - The server validates the refresh token and responds with a new access token and (optionally) a new refresh token.
+
+  3. Client Credentials Flow
+    Typical use: Applications without users (e.g., scripts, cron jobs, microservices).
+    Steps:
+      - The client POSTs the token endpoint with:
+      - grant_type=client_credentials
+      - client_id, client_secret
+    scope
+    The server responds with an access token (there is no refresh token, as another one can be easily requested).
