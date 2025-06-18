@@ -1,0 +1,24 @@
+OAuth Actors
+  - The problem that OAuth solves
+  - The Actors of the protocol
+
+The Problem 
+  - The application need access to API on Users behalf
+  - The Application should not "see" the user's credentials
+  - User need to be aware that it has allowed the Application access
+
+OAuth 2.0 Actors
+
+Authorization vs Delegation 
+  - OAuth is not Open Authorization 
+  - OAuth is a Delegation Protocol 
+  - What's the difference 
+
+Summary
+  - OAuth delegates access to applications on a user's behalf
+  - The client is the application
+  - The RS is the API
+  - Delegation != Authorization
+    - The API may still deny the request 
+
+
