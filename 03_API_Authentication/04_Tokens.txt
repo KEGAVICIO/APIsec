@@ -1,0 +1,65 @@
+What is a token in OAuth?
+  A token is a value that represents permissions or authentication. It has three key dimensions:
+  - Format – How it is structured and validated.
+  - Purpose – What it is used for and who receives it.
+  - Type – How it is transmitted and protected.
+
+1. Token Format
+  By Reference:
+    - It is opaque: you cannot read or decode it.
+    - It is like an ID that the authorization server understands.
+    - It requires direct validation with the server.
+    - High privacy.
+  By Value:
+    - Contains all the information inside (such as permissions, user, etc.).
+    - It can be validated without contacting the server.
+    - Common formats:
+      - JWT (JSON Web Token): the most popular.
+      - SAML or CWT.
+
+2. Token Purpose
+  Access Token:
+    - To access APIs (resource servers).
+    - Must be kept secure.
+  Refresh Token:
+    - Only for the authorization server.
+    - Used to renew access tokens.
+    - Should never be sent elsewhere.
+  ID Token (OpenID Connect):
+    - For the client after login.
+    - Contains user information.
+    - Should not be sent to others.
+
+3. Token Type (Transport)
+  Bearer Token
+    - Like cash: whoever has it can use it.
+    - Does not require proof of identity.
+    - Very common, but must be protected:
+      - Always use TLS.
+      - Do not store it in the browser or in logs.
+  Proof of Possession (PoP) or "Holder of Key"
+    - Like a card with a PIN: you need a private key to use it.
+    - Only the rightful owner can use the token.
+    - Common methods:
+      - DPoP (requires an additional signed token).
+      - Mutual TLS (uses client certificate).
+
+JSON Web Tokens (JWTs)
+  Three parts: header.payload.signature (Base64 encoded)
+    - header: signing algorithm and keys.
+    - payload: useful information (scopes, user, times, etc.).
+    - signature: protects the integrity of the token.
+  Signed (JWS): ensures that it originates from the issuer.
+  Ciphered (JWE): hides the content.
+  Algorithms should be restricted (whitelisted).
+    - Never accept alg: none.
+
+Best practices and warnings
+  Do not abuse the token content:
+    - The client should not inspect or depend on the access token content.
+    - It can change without notice (causing errors on mobile devices, etc.).
+  JWT ≠ Automatic security:
+    - JWT is a format, not a protocol.
+    - Using JWT incorrectly breaks security.
+  Follow the rules of protocol:
+    - As in traffic, it's not the car (token) that provides safety, but the rules (protocol).

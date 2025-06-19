@@ -1,0 +1,65 @@
+What are Scopes?
+  Scopes define what an application can do, i.e., the application-level permissions.
+  - They are keys (strings) such as: read, user.invoice.read, email, etc.
+  - The client requests them, but the authorization server decides whether to grant them.
+  - They should generally be preconfigured (they are not dynamic).
+  - Sometimes user consent is required, especially with third-party applications.
+
+Key features of viewers:
+Feature                   detail
+Who requests them?        The client
+Who approves them?        The authorization server
+What permission level?    Application, no user
+Are they values or keys?  Standalone keys
+What are they used for?   Authorize general actions (e.g., read, write)
+
+Practical example:
+  A client application requests user.invoice.read
+    - Can read invoices
+    * Cannot modify them
+
+  Another application requests user.invoice.update
+    - Can modify them (more privileges)
+
+  This allows different applications to have different levels of access, even if the same user logs in to both.
+
+What are Claims?
+  Claims are key-value pairs within the token that contain data about the user or context.
+
+    - They are used for fine-grained authorization.
+    - Examples: sub: "jacob", age: 42, subscription: "gold", cost_center: "sales".
+    - They are secured by the Authorization Server.
+    - They are used to determine if a specific user can access a specific resource.
+
+Key features of claims:
+  Feature               details
+  Who defines them?       Authorization server
+  What permission level?  Specific user/session
+  What does it represent? Identity, user attributes
+  Where is the van?       In the JWT (access token) payload
+
+Practical example:
+  The token contains:
+    {
+      "sub": "jacob",
+      "subscription": "gold",
+      "subscriber_id": "ABC123"
+    }
+
+  The API checks:
+    Do you have the user.invoice.read scope?
+    Does the subscriber_id in the token match the ID of the resource you are requesting?
+
+Scopes vs. Claims: Key Differences
+  Aspect                Scopes                          Claims
+  Which child?          Keys that define actions        Key-value that describes the user
+  Level of control      Coarse (coarse-grained)         Fine (fine-grained)
+  Where are they used?  To authorize access types       To authorize access to specific data
+  Who uses them?        Client + Authorization server   Resource server (API)
+  Example?              user.invoice.read               subscriber_id: "ABC123"
+
+Best practices
+  - Scopes should be relevant to the application, not the user.
+  - Claims should be fixed user attributes (age, subscription, etc.).
+  * Do not use contextual claims (time of day, location) to avoid inconsistencies.
+    - Claims allow the API to avoid making extra database calls (data already comes in the token).
