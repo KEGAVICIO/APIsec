@@ -1,0 +1,66 @@
+What is an API Gateway and why is it important?
+  An API Gateway is a centralized entry point that:
+    - Protects APIs (Layer 7 Firewall: Scans HTTP traffic).
+    - Provides visibility into public endpoints.
+    - Filters invalid or unauthorized requests before they reach your internal network.
+
+How do the client, gateway, and API interact?
+  - The client makes a request with a token.
+  - The gateway receives and validates that token.
+  - If it's valid, it forwards the request to the appropriate API.
+
+Token Types and the “Phantom Token Flow”
+Token         Type      Content Typical Use
+By JWT        Value     Internally, within the network
+By Reference  Opaque    Externally (avoids leaking PII)
+
+In the phantom token flow:
+  - The gateway receives an opaque token.
+  - It calls the authorization server to validate it (/introspect or /token/exchange).
+  - It receives a JWT in return and forwards it to the API.
+
+  This ensures:
+
+  - “Zero Trust” security.
+  - Full audit trail.
+  - Internal APIs use JWTs as a “mini identity API.”
+
+How are tokens passed between APIs?
+  When one API needs to call another, there are three possible patterns:
+
+  Method:     How does it work?
+  Exchange    API uses token exchange to obtain a new, more limited JWT (fewer scopes/claims).
+  Embed       The original JWT already contains nested tokens (embedded) for other APIs.
+  Share       The API forwards the same token received to another API (risky if the domain changes).
+
+Recommendation:
+  - Use exchange if the APIs are in different security domains.
+  - Use embed if it's an internal call that's always present.
+  - Use share only if both APIs share a security context.
+
+Authorization in Gateway vs. API
+  Gateway level       (coarse-grained)                API (fine-grained)
+  What do you check?  General scopes                  Scopes + Claims
+  What do you decide? Should I let the request pass?  Can this user access this resource?
+  Example?            Do you have invoice.read?       Do you own invoice 123 with ID ABC?
+
+Structured Scope Design
+  To avoid "scope explosion," it is recommended:
+
+  - Hierarchical structure:
+    - read_invoice
+    - write_invoice
+    - high_video_stream
+    - low_video_stream
+
+  - Group by domain:
+    - Billing: read_invoice, write_invoice
+    - Streaming: video_stream, video_metadata
+
+Key Best Practices
+  - Use internal JWTs to maintain traceability and trust.
+  - Centralize token validation and basic authorization on the gateway.
+  - Delegate fine-grained authorization to the API using claims.
+  - Use token exchange or embedding for secure API-to-API communication.
+  * Do not use opaque tokens within the network.
+  - Minimize privileges: Internal tokens should be as restrictive as possible.
