@@ -1,0 +1,18 @@
+Better Docs = More Consistency
+
+Writing better documentation leads to greater consistency & standardization
+  - Expose inconsistencies: Comparing docs across APIs highlights problems 
+  - Improve quality: Implicit QA by docs writers, explicit functional view for testing
+  - More secure: Less room for error in security and ops (no zombies!)
+
+Bad, poorly maintained, and/or non-existent documentation is an increased risk for security exposures
+
+Use Docs in the security review process
+  In both a documentation-first and design-first methodology, auth can be security reviewed before any implementation has taken place.
+  Run your docs through your Security Review. How? Putting security measures in your API style guides is a big step in the right direction. As part of API design review + security process, Style Guides can establish auth rulesets that prevent inconsistency.
+
+  - One weapon in your repoitory can be a security-style guide. Your API teams may already use style guides to automate the enforcement of adata formats or endpoint naming conventions.
+
+  - With a well-chosen set of enforceable security rules, you can use the same tools to dramatically fortify your defenses against data theft and resource exploits.
+
+

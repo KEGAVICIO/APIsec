@@ -1,0 +1,148 @@
+Documentation
+  API documentation is a human-readable guide that describes how developers can make machines communicate with each other. It's not just about writing for programmers; it's about facilitating connections between systems and, in many cases, creating lasting business relationships.
+  
+  noun - A human-readable description of how developers will enable machines to communicate with each other
+
+  Product Documentation - Helps people use a product with or without an API
+  API Documentation - Helps developers programmatically use products
+
+Who is documentation for?
+
+  In parallel both:
+    - Developers 
+    - AND, Non-Developers
+  
+  Internal vs external documentation
+    - Internal 
+      - Different authN/authZ pattersns
+      - Internal proprietary information and links
+
+    - External
+      - More polished design
+      - Focus on reasons to adopt
+
+    REMEMBER: Developers try, business buys!
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Types of API Documentation 
+
+  Organize content into these types:
+    - Reference 
+      This is the most technical and straightforward section. It contains:
+        - HTTP methods, endpoints, query parameters, headers, and response bodies.
+        - HTTP status codes (200, 400, 500) and their meanings.
+        - Examples of use in cURL or specific languages.
+        - Precise information about each field in the responses.
+      Ideal for developers who are already familiar with the API and just need to know how to integrate it.
+    
+    - Concepts
+      They explain what the API or set of APIs does:
+        - They introduce key terms (for example, what is an escalation policy?).
+        - They define domain concepts for technical and non-technical users.
+        - They provide insight into the whys and wherefores of an API.
+      Key to guiding both developers and decision-makers.
+    
+    - Tasks 
+      They show how to achieve specific goals with the API:
+        - Guide you step by step to complete an action: create payments, authenticate users, etc.
+        - They organize the documentation around real-life use cases.
+        - They prevent users from using the API in unplanned or inefficient ways.
+      It's a practical guide for solving real-life problems with the API.
+    
+    - (Optional) 4️⃣ SDKs / Libraries / Tooling
+      Although not always available, they can accelerate adoption:
+        - Official or community libraries for different languages.
+        - Command-line tools or graphical interfaces.
+        - They can be expensive to maintain, but they provide great value.
+      Important in large-scale environments, both internal and public.
+  
+  Best Practices and Key Details
+    - Consistency: Same error handling, pagination, and authentication across the entire API.
+    - Clear security from step 1: Documentation should explain how to authenticate before anything else.
+    - "Try it!": Many portals allow you to test the API directly from the documentation (sandbox/mock).
+    - Quick Start: The ideal time for a successful first call is < 5 minutes.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+VALUE OF GOOD DOCUMENTATION 
+
+    Why do yo need documentation?
+      - Teach your customers, prospects, employees, and partners about using products and APIs
+      - Define, test and secure product boundaries for the organization and/or consumers
+      - Enable customer support offerings, especially self-helps/self-service
+      - Support technical marketing efforts
+
+    Who benefits from good documentation?
+      Internal value 
+        Avoid duplicated effort 
+        Increase shared leverage
+        Organizational understanding of plataform capabilities
+
+      External value
+        Increased adoption by end consumers
+        Better relationships management with API consumers
+        Reputation/credibility with developer community 
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+TOP 3 REASONS DOCUMENTATION IS MUST-HAVE 
+  #1: Documentation can help reduce risk by:
+    1- Avoid API Exploits: Catch inconsistent/non-existent auth mechanisms that can leave companies vulnerable to a top exploit 
+      a- OWASP API Top 10: 
+        - BOLA & Broken Authentication are #1 and #2 
+    2- Miss Mistakes: Audit and review built into the process
+      a- Documentation review aligns with broader API design review process, style guide, adn standards
+  
+  #2: No Docs = Risk of an Army of Zombie APIs
+
+    - Un documented APis become unmonitored attack vectors. 
+      -> Shadow/Zombie APIs are one of the most significant vulnerabilities to your network.
+      -> 94% of respondents had experienced some sort of API security incident in the last year. (Nordic APIs)
+    
+    - Build a catalog of your API capabilities and keep docs maintained so that you know what you have and where it is, so you can protect it 
+
+  #3: No Docs = API Sprawl 
+    - Large risk of duplication of efforts, if no one knows what APIs already exist 
+    - Overall cognitive alignment based on the facts:
+      What API capabilities exist?
+        -> Stronger organizational execution based on this alignment 
+
+    - Lack of visibility into APIs delivered by teams can result in less reusability
+    - Customer-centricity: create a map of company and/or customer capabilities using words customers would recognize
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+TOP 2 REASONS DOCUMENTATION IS NICE-TO-HAVE
+  
+  Why documentation is your friend...
+    Observability - Automated options exist, but the only sure way is to establish a source of truth is with the goal of good documentation: a definitive Developer Portal 
+
+    Shared Leverage - Teams with visibility to existing and upcoming APIs, increase collaboration rather than duplicated functionality and wasted effort
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Who writes the docs anyways?
+  Developers 
+    Whoe everyone THINKS write the docs 
+      - Cons: implementers are not good at thinking like consumers 
+        -> Peer review essential if implementing developers are the only option 
+
+      - Pros: Developer advocates can be strong partners in providing developer feedback (but not always the best docs writers)
+
+  Product Managers
+    Who occasionally WILL write the docs 
+      - Api Product Managers are an increasingly common role
+
+      - Pros: Customer-centric perspective can be effective in producing a more effective developer experience 
+
+      - Cons: Lack of technical expertise. could require partnership with technical or engineering leads
+
+  Technical Writers 
+    Who SHOULD write the docs 
+      - Pros: Smart investment with APIs, underutilized in many companies
+
+      - Cons: Not all companies have the budget for tech writers as an addition to their API team 
+
+      - Pro tip: Get your writers involved early in the process (design phase), pick a standar style guide and hace them stick to it 
+
