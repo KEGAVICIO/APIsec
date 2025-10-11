@@ -1,0 +1,44 @@
+Path Traversal: A vulnerability that allows an attacker to access files or directories outside the scope intended by the server or API.
+Classic example: repeatedly using ../ to access sensitive files such as /etc/passwd.
+
+Main Causes
+  Unvalidated input: User parameters used directly in paths (e.g., include($_COOKIE['template'])).
+
+  Insecure server configuration:
+    Poorly defined root directory.
+    Directory listing enabled.
+    Inclusion of files outside the web root.
+
+  Overly permissive API specifications: Parameters defined as unrestricted strings allow injections (../, Unicode, URL encoding, etc.).
+
+  Sensitive files in the web root: .git, README, .env, backups.
+
+Risks
+  Access to system files (passwd, logs, hosts).
+
+  Theft of sensitive information (configurations, credentials, source code).
+
+  Linked with other vulnerabilities to increase impact.
+
+Solutions
+  Strict input validation:
+  Define expected formats in the specification (length, types, allow lists).
+  Reject any invalid input.
+  Secure server configuration:
+  Disable directory listing.
+  Restrict inclusions only within the web root.
+  Consider mounting the web root on an isolated disk.
+
+Secure design:
+  Do not use direct variables in paths.
+  Map IDs → paths in the backend.
+  Remove unnecessary files from the web root.
+  Safe error handling: Return an error and log for unexpected input.
+
+Testing and auditing:
+  Automated scanning with traversal tools.
+  Static code analysis.
+  Key points
+  Do not play the "filtering game" (../, unicode, encoding). It's better to define what is valid and block everything else.
+  It remains common and exploitable today, with thousands of reported CVEs.
+  It can be very severe: direct access to critical system files.

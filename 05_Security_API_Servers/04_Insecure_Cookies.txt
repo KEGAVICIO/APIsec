@@ -1,0 +1,45 @@
+Insercure Cookies = Cookies stored without restrictive security settings
+
+Cookies store data in the client's browser. If not properly protected, they can be read, modified, or stolen, allowing user impersonation or data extraction. Always treat them as untrusted input.
+
+What happens and why it matters
+
+Cookies are sent/received via headers (Set-Cookie → client; Cookie → server).
+They can contain many key-value pairs (IDs, flags, Base64-encoded data, etc.).
+An attacker who views or manipulates cookies can forge sessions, elevate privileges, or extract data.
+Main vectors: reading via JavaScript (stealing), local manipulation (forged cookie), and reading in transit (sniffing).
+
+Specific risks
+Cookie forging/fuzzing: the server relies on manipulable cookie values (Trusting cookie data).
+Harvesting from another site: external scripts attempt to read cookies via JS (httponly + no Domains).
+XSS Harvesting: If XSS is present, the injected code can steal JS-readable cookies (httponly).
+Interception in transit: Without HTTPS, a MitM can read cookies (Secure flag).
+
+Solutions
+1. Treat cookies as untrusted user data: validate and sanitize Everything on the server
+2. Be restrictive on what data is stored in Cookies
+3. Analyze your cookies from an offensive mindset
+4. Do not store sensitive or critical logical data (roles, security flags, table names, etc.) in cookies.
+
+Cookie Decoding
+  - Find interesting keys / fields
+  - Sort data types 
+    * Unique ID string
+    * Numeric ID
+    * Booleans
+    * Encoded data
+  - Decoding data
+    * Delimiters
+    * Base64 decode and similar
+
+Cookie flags:
+
+HttpOnly → prevents access from JavaScript (prevents script theft).
+Secure → only sends over HTTPS (protects in transit).
+SameSite → reduces the risk of CSRF/third-party data harvesting (Lax/Strict as needed).
+Path/Domain → restricts scope.
+Avoid storing logic in the cookie; only store an identifier and maintain critical state on the server.
+Use reasonable expirations (TTL) and session rotation/invalidation.
+Scan cookies with an offensive focus: inspect, decode (Base64/URL), edit, and test if the server accepts changes.
+Protect against XSS (Content Security Policy, input sanitization) so that HttpOnly isn't the only barrier.
+

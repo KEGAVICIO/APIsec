@@ -11,8 +11,25 @@ Use Docs in the security review process
   In both a documentation-first and design-first methodology, auth can be security reviewed before any implementation has taken place.
   Run your docs through your Security Review. How? Putting security measures in your API style guides is a big step in the right direction. As part of API design review + security process, Style Guides can establish auth rulesets that prevent inconsistency.
 
-  - One weapon in your repoitory can be a security-style guide. Your API teams may already use style guides to automate the enforcement of adata formats or endpoint naming conventions.
+  - One weapon in your repository can be a security-style guide. Your API teams may already use style guides to automate the enforcement of adata formats or endpoint naming conventions.
 
   - With a well-chosen set of enforceable security rules, you can use the same tools to dramatically fortify your defenses against data theft and resource exploits.
 
+Automate consistency
+1- Manually maintaining documents is risky
+  a- Easy to create inconsistencies
+2- Consistency & standardization
+  a- Style Guides & Linting
+    i. Manually curated vs automate
+    ii. Spectral: robust governance rulesets, including docs
+    iii. Vale: docs style linter
+3- Scaling with ease/ability to replicate and reuse 
+4- Style guides make docs more consistent and pleasing to the developer eye
 
+Good docs matter for partnership
+  Brand Affinity:
+    Think of documentation as a developer's firs impression of your brand and product. If it's written poorly, they will already have a poor taste in their mounth. No developers and even less partners will want to engage with your API or your service when your documentation isnt up to standard.
+  Increased API Adoption: 
+    The more widely understood and consumed your documentation is the likelier chance that developers are actually utilizign yout API and adopting it at scale. If your docs are easy to read, they're easy to understand and apply to your API. Happy consumers mean long-term adopters and evidently champions of your API.
+  Scaling Your API, Producing ROI:
+    To truly scale and grow your API program eventually you will need to work with 3rd parties, integrators, community developers, and more to partner on growing your API to the next level. Solid documentation will be require for healty partner relationships

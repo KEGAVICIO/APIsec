@@ -1,0 +1,42 @@
+Rate Limiting = Setting inbound limitations to ensure a service level and reliability
+  - RateLimit Headers
+    * RateLimit-Limit: 10
+    * RateLimit-Remaining: 1
+    * RateLimit-Reset: 7
+  - HTTP Status = 429
+  - Scope: user, origin, global, resource, endpoint
+  - Server Side Throttling
+
+Why?
+  - OWASP-API-4: Unrestricted Resource Consumption
+  - Service availability
+  - Security
+  - Budget
+
+Limiting in Layers
+1. Gateway / Network Appliance
+2. Service
+3. Server
+4. Endpoint 
+5. User
+6. Client Signature
+7. Quota
+8. Logic
+
+Sandbox
+OWASP CRAPI has a rate limiting issue
+  - Perform a layer 7 DoS using contact mechanic feature
+    * Should it be authenticated?
+    * How often should someone use this function?
+    * Are there any restrictions to enforce this?
+
+  - Whats happening?
+    - An unauthenticated endpoint
+    - Its allowing the BD to be locked with inserts
+
+Tech Tips:
+  - Avoid SQL operations to manage Throttling
+  - Avoid disk operations
+  - Include IP with User
+  - Use cache where appropriate,(same query)
+  

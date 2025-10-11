@@ -1,0 +1,43 @@
+Techniques
+
+Code Annotations
+  Pros:
+    Code matches docs
+    No extra steps
+
+  Cons:
+    Not easily accesible by non-developers
+    Implementation required
+
+Spec-Based
+  Pros:
+    Desing*first minimizes duplicated effort
+    Earlier feedback loops
+
+  Cons:
+    Code can get out of sync with docs
+
+Bespoke
+  Pros:
+    Little tooling required
+    Easily accomplished with any CMS
+
+  Cons:
+    Difficult to keep in sync with API contract
+
+Tools
+  You dont need a complete CI/CD pipeline to take advantage of API reference generators (though thats not a bad end goal). All that required is an API description document such as one following the OpenAPI Specification. There are a growing number of industry tools that can help you create your OpenAPI definition and convert it into a more human-readable API reference 
+
+  Stoplight Tools
+    > Stoplight platform
+    > Open-Source
+      - Spectral for linting
+      - Elements for documentation creating
+
+    > Notion
+    > Redocly
+    > Readme
+    > SwaggerHub
+
+
+

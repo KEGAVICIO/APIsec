@@ -1,0 +1,41 @@
+Quick Tips for Creating Great Docs
+  Be inclusive in your docs: writing, no jargon or acronyms
+  Use an approachable tone and plain language
+  Use clear variable names and function names in code samples
+  Be alert to discriminatory language
+  Include practical guides and multimedia elements
+  Interactive docs are developer-friendly
+
+
+Best Practices for Writing Great Docs 
+  - Multi-Media Documentation:
+    The best way to avoid alienating low-code developers is by providing rich documentation with pictures and flowcharts. This type of documentation is useful for less technical users and helps themm understand the defined relationship between APIs.
+    > One of the biggest issues with API documentation is that it often stops at the "send a request, get a result" stage. However, effective documentation should go beyound this and provide a step-by-step guide to help developers navigate the entire API lifecycle. Multi-Media documentation can make a huge difference in consumption and what low code developers get out of your APIs.
+
+  - Interactive Docs, Not Static:
+    With interactive documentation and copy-paste code samples, you'll help developers quickly get to success. Devs won't just read your documentation, they can provide input to it and inspect a response. Right fromt your API reference, they can declare parameters and make live calls to your API.
+  > With interactive documentation, you're removing a major barrier to taking the next step with an API. With static documentation, developers would need to bring API calls to a request utility or directly into code before they can understand whats possible. Instead, they can see whats possible without leaving their browser.
+
+  - Create Automated Docs:
+    Automated docs are a good first-line solution for documenting references and functionality in a format that maps neatly to your API endpoints. At its most basic, automated documentation can be produced by open-source tools built around the OpenAPI specification
+    > These tools work by reading your OpenAPI specification file and feeding that data directly into an interactive web tool They are quick to launch, and they update automatically whenever your OpenAPI specification file changes, but they come with limitations.
+
+  - Make Your Docs Accessible:
+    Educate your writers about accessibility requirements. The World Health Organization has estimated that 15% of the world requires specifically accessible content. Work with your team to ensure your API documentation is usable by screen readers, that colors, images and tables also include labels and alt text, and that your documentatino includes white space for easy scannability and navigation.
+
+Is your content up-to-date?
+  - Old content is confusing and causes support woes
+  - Keep sceenshots to a minimum and focused on specific functionality
+  - Review overvier content and tutorials as an integrated part of dev/review lifecycle
+
+Is your content bloated?
+  - Steamlined content aids findability and usability
+  - Avoid repeating content, even if you have reuse standards
+  - Repetitive content confuses users
+  - Help search results by returning only relevant content
+
+Is your documentation consistent in tone and style?
+  - Enforce good governance and security measures
+  - Create consistency and solid developer experience
+  - Always make excellent documentation
+

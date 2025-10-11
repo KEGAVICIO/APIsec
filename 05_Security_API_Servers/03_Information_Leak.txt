@@ -1,0 +1,53 @@
+Server Information Leak = tech stack advertisement in headers
+
+- Web Servers advertise in headers by default
+- Appliance can also add headers
+- These headers have no benefit
+- Detecting and removin them is easy
+
+Server Information Leak
+
+A server information leak occurs when a server reveals, through headers in HTTP responses, information about the technology used (e.g., which server, framework, version, etc.).
+
+This is dangerous because:
+
+An attacker can identify the technology stack.
+
+Then look for source code, configurations, or known vulnerabilities (CVEs).
+
+The more unique or uncommon the server, the more attractive it is to attack.
+
+Practical Example
+In DevTools (Chrome, Network tab → Headers), you can view the response headers.
+
+Example: a server displaying "Server: Uvicorn" → allows you to identify that it is an open-source Python server.
+
+With that clue, an attacker can search for specific CVEs to exploit.
+
+Other examples:
+Nginx: Very popular, with more than 160 known vulnerabilities.
+Google web server: Identified in advertising headers.
+
+Checklist for analyzing and mitigating leaks
+
+Review response headers with tools such as:
+
+Chrome Dev Tools
+Postman
+Node.js (search)
+
+Avoid getting stuck in cache layers: the important thing is to see headers coming from the real server (APIs, dynamic queries).
+Look for dangerous headers:
+Server
+X-Powered by
+Version
+
+How to fix it
+Each server allows you to easily hide or remove headers:
+Uvicorn → option at startup (--server-header false).
+Nginx → server_tokens disabled; in the configuration.
+Express (Node.js) → use a cap or app.disable("x-powered-by").
+IIS and others → have their own settings to disable these headers.
+
+Conclusion:
+Revealing server information in headers doesn't provide anything to the client, but it greatly aids attackers. Therefore, headers that indicate technology, versions, or frameworks should be removed or disabled.

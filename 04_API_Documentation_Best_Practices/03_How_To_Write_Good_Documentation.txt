@@ -1,0 +1,53 @@
+Think about: Who are your audiences?
+  Developers, Internals, Gated
+  End Customer, External, Ungated
+
+Tips: Generating Useful API Reference
+- Explanation of what request data is required and what is optional
+  -> The version of your API
+  -> Authentication and other headers required for all requests
+  -> The path to call each endpoint
+  -> Which HTTP methods for each operation
+  -> The request data fields and where each goes, such as path, query-string, or body
+
+- Data expect in each response, including wich responses will always be represent
+  -> Example request and response data
+  -> Which HTTP status codes are posible for each endpoint/method pairing
+  -> What each status code means in the context of each call
+
+The Importance of Discoverability 
+Ask yoursefl:
+  Are people able to find your documentation, and once there, can they find what they need?
+
+Quick tips on documentation reading:
+Let your devs try it. 
+  This is where you want Developer Advocacy! Have your internal developers read your work, even if dedicated roles dont exist, recruit developers (who didnt build the API) to try and follow the documentation to use it. When they do this take note of:
+  Any friction points in the process
+    > Where did they struggle? What could be clearer? Is there too much jargon?
+  Auth is a very common sticking point, and should be step 1 in "Getting Started"
+    > Be sure that the process to get an access token is clear and well tested
+
+
+
+---------------------------------------------------------------
+Creating REST API Documentation 
+
+Generating simple API documentation: not by hand!
+While you can write it by hand, it is less than ideal. Plus with the same amount effort put into generating your API reference, you can create other benefits for your engineering team and organization at large. Time and accurancy are among the huge advantages to using a documentation generator:
+  > Quickly create an initial reference to share
+  > Update documentation easily when the API changes
+  > Ensure that your API documentation matches the API functionality
+
+A prerequisite to generating any meaningful documentation is an OpenAPI document.
+
+This API definition sometimes called a Swagger file, describes the endpoints, request data, responses and other details of an API in a machine-readable API description format. Among the many uses of an OpenAPI document is to generate API reference docs
+
+Example of Great REST API Docs: Stripe
+  > Stripes API reference has nearly become a standard for its completeness and browsability.
+  > Each operation on an endpoint is described in human-friendly terms, along with the arguments developers pass to Stripe.
+  > Finally, a copy-paste request is shown.
+
+Twilio
+  > Twilio's guides are notable for both their programming language coverage and their step-by-step walkthrough.
+  > Twilio keeps the code visible while you read the description of whats happening and how to customize it for your needs.
+  > You can ckick through a step at a time or browse the code samples which are described the way a developer would use them.

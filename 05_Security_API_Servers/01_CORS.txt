@@ -1,0 +1,30 @@
+Cross Origin Resource Sharing (CORS)
+
+CORS is a set of browser controls set by web servers CORS defines what responses are allowed from where
+  - Origins
+  - Credential
+  - Methods
+  - Headers
+
+Why use CORS?
+  You have an API or web server with something to protect
+  - User data
+  - Intellectual property 
+  - Branding
+
+When CORS helps
+  Malicious Systems ===> API
+  Malicious Site ====> CORDS BLOCKED
+  Unespect User
+
+Common CORS scenario 
+  - Create a new server for an API 
+  - The server is set with some basic security in place
+  - Developers gets a CORDS allow-Origin error from a localhost test
+  - Developers "Fixes" the error by passing CORDS
+  - This hole is never plugged for production 
+
+CORDS solution
+  Set the headers, define what is allowed
+
+

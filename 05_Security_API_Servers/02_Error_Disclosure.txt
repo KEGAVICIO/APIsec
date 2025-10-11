@@ -1,0 +1,25 @@
+Error Disclosure
+  error handling + defensive coding
+  revealing technology and code in an error 
+
+  - Erroring out is necessary
+  - Intentional error handling is good
+  - Developers and Custumers are separete error message audiences 
+
+An Error Disclosure is when you have too much information in your error messages that are sent to a user's machine. It doesn't necessarily have to show up in a UI, but anything that's sent to a browser that a malicious actor can take and use to better understand what your system is in order to attack it is gonna be called an Error Disclosure. 
+Now, handling errors is necessary as a developer, and you want to intentionally error and error out actually pretty often and early so that things that are done maliciously don't work.
+
+But when you do that error, you wanna make sure that you're not giving away information that's going to make it easier to attack your system. 
+This means that you're gonna want to have separate error messages for your developers to debug what's going on with the system than you're going to send to your customers.
+
+Error Handling Best Practice
+  Do 
+  - Error early
+  - Include useful information for developers in an error 
+  - Display something specifically crafted for Custumers on error 
+
+  Dont 
+  - By pass errors
+  - Expose developers information to customers
+
+
